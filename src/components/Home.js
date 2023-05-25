@@ -6,8 +6,21 @@ function Home() {
   return (
     <Container>
       {/* Home */}
-      <Section />
-      <Section />
+      <Section 
+      title = "Model S"
+      discription = "Plaid"
+      backgorundImg = "model-s.jpg"
+      leftBtnText = "Custom Order"
+      rightBtnText = "Demo Drive"
+
+      />
+      <Section 
+        title = ""
+        discription = ""
+        backgorundImg = "model-y.jpg"
+        leftBtnText = ""
+        rightBtnText = ""
+      />
       <Section />
 
     </Container>

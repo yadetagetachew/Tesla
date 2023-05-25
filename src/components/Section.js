@@ -1,24 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Section() {
+function Section(
+    {   title, 
+        discription, 
+        leftBtnText, 
+        rightBtnText, 
+        backgorundImg,
+    }){
     return (
-        <Wrap>
+        <Wrap bgImage={backgorundImg}>
             <IteamText>
-                <h1>Model S</h1>
-                <p>Plaid</p>
+                <h1>{title}</h1>
+                <p>{discription}</p>
             </IteamText>
             <Speaks>
 
             </Speaks>
             <Buttons>
             <ButtonGrp>
+            {leftBtnText &&
                 <LeftButton>
-                    Order Now
-                </LeftButton>
+                    {leftBtnText}
+                </LeftButton>   
+            }
+                    {rightBtnText && 
                 <RightButton>
-                    Demo Drive
+                    {rightBtnText}
                 </RightButton>
+                }
             </ButtonGrp>
             </Buttons>
         </Wrap>
@@ -39,7 +49,7 @@ const Wrap = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
+    background-image: ${props => `url('/images/${props.bgImage}')`};
 `
 const ButtonGrp  =styled.div`
     display: flex;
