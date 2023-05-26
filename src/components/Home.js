@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Section from './Section'
+import SecondHeader from './SecondHeader'
 
 function Home() {
   return (
@@ -10,18 +11,20 @@ function Home() {
       title = "Model S"
       discription = "Plaid"
       backgorundImg = "model-s.jpg"
-      leftBtnText = "Custom Order"
+      leftBtnText = "Order Now"
       rightBtnText = "Demo Drive"
 
       />
-      <Section 
+      <SecondHeader />
+      {/* <Section 
         title = ""
         discription = ""
-        backgorundImg = "model-y.jpg"
+        backgorundImg = "new-interior.jpg"
         leftBtnText = ""
         rightBtnText = ""
+        speedspeaks = ""
       />
-      <Section />
+      <Section /> */}
 
     </Container>
   )

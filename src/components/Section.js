@@ -7,6 +7,7 @@ function Section(
         leftBtnText, 
         rightBtnText, 
         backgorundImg,
+        speedspeaks,
     }){
     return (
         <Wrap bgImage={backgorundImg}>
@@ -14,22 +15,27 @@ function Section(
                 <h1>{title}</h1>
                 <p>{discription}</p>
             </IteamText>
-            <Speaks>
-
-            </Speaks>
             <Buttons>
-            <ButtonGrp>
-            {leftBtnText &&
-                <LeftButton>
-                    {leftBtnText}
-                </LeftButton>   
-            }
-                    {rightBtnText && 
-                <RightButton>
-                    {rightBtnText}
-                </RightButton>
+                <Speaks>
+                    <SpeedMetrics>396mi</SpeedMetrics>
+                    <SpeedMetrics>1.99 s</SpeedMetrics>
+                    <SpeedMetrics>200 mph</SpeedMetrics>
+                    <SpeedDiscription>Range (EPA est.)</SpeedDiscription>
+                    <SpeedDiscription>0-60 mph</SpeedDiscription>
+                    <SpeedDiscription>Top Speed</SpeedDiscription>
+                </Speaks>
+                <ButtonGrp>
+                {leftBtnText &&
+                    <LeftButton>
+                        {leftBtnText}
+                    </LeftButton>   
                 }
-            </ButtonGrp>
+                        {rightBtnText && 
+                    <RightButton>
+                        {rightBtnText}
+                    </RightButton>
+                    }
+                </ButtonGrp>
             </Buttons>
         </Wrap>
     )
@@ -51,18 +57,20 @@ const Wrap = styled.div`
     align-items: center;
     background-image: ${props => `url('/images/${props.bgImage}')`};
 `
-const ButtonGrp  =styled.div`
+const ButtonGrp = styled.div`
     display: flex;
     gap: 15px;
-    margin-bottom: 4rem;
-    @media (max-width: 768px) {
+    margin: 1rem 14rem;
+    @media (max-width: 650px) {
         flex-direction: column;
     }
 `
 
-const IteamText = styled.div`
+const IteamText = styled.h1`
     padding-top: 15vh;
     text-align: center;
+    font-weight: inherit;
+    font-size: 1.3rem;
 `
 
 const LeftButton = styled.div`
@@ -79,12 +87,34 @@ const LeftButton = styled.div`
     opacity: 0.85;
     border: 4px solid white;
     padding: 4px 24px;
+    font-weight: 700;
     cursor: pointer;
 `
 const RightButton = styled(LeftButton)`
     background-color: transparent;
     color: white;
 `
-const Speaks = styled.div``
+const Speaks = styled.div`
+    display: grid;
+    grid-template-rows: 35px 35px;
+    grid-template-columns: 160px 160px 160px;
+`
 
-const Buttons = styled.div``
+const SpeedMetrics = styled.div`
+    font-size: 23px;
+    font-weight: 700;
+    color: white;
+`
+
+const Buttons = styled.div`
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+`
+
+const SpeedDiscription = styled.div`
+    font-size: 13px;
+    font-weight: lighter;
+    color: white;
+`
