@@ -7,7 +7,6 @@ function Section(
         leftBtnText, 
         rightBtnText, 
         backgorundImg,
-        speedspeaks,
     }){
     return (
         <Wrap bgImage={backgorundImg}>
