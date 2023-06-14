@@ -7,6 +7,12 @@ function Section(
         leftBtnText, 
         rightBtnText, 
         backgorundImg,
+        speed1,
+        speed2,
+        speed3,
+        discription1,
+        discription2,
+        discription3,
     }){
     return (
         <Wrap bgImage={backgorundImg}>
@@ -16,12 +22,12 @@ function Section(
             </IteamText>
             <Buttons>
                 <Speaks>
-                    <SpeedMetrics>396mi</SpeedMetrics>
-                    <SpeedMetrics>1.99 s</SpeedMetrics>
-                    <SpeedMetrics>200 mph</SpeedMetrics>
-                    <SpeedDiscription>Range (EPA est.)</SpeedDiscription>
-                    <SpeedDiscription>0-60 mph</SpeedDiscription>
-                    <SpeedDiscription>Top Speed</SpeedDiscription>
+                    <SpeedMetrics>{speed1}</SpeedMetrics>
+                    <SpeedMetrics>{speed2}</SpeedMetrics>
+                    <SpeedMetrics>{speed3}</SpeedMetrics>
+                    <SpeedDiscription>{discription1}</SpeedDiscription>
+                    <SpeedDiscription>{discription2}</SpeedDiscription>
+                    <SpeedDiscription>{discription3}</SpeedDiscription>
                 </Speaks>
                 <ButtonGrp>
                 {leftBtnText &&
