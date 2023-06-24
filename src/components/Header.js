@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function Header() {
   return (
     <Banner>
-      <p>Receive 3 years unlimited free Supercharging. Finance your purchase for as low as 3.99%. <a href="https://www.tesla.com/models/design#overview">Learn more</a></p>
+      <p>3 Years Unlimited Free Supercharging<span>  With</span><a href="https://www.tesla.com/models/design#overview"> Model S purchase</a></p>
     </Banner>
   )
 }
@@ -22,5 +22,8 @@ export const Banner = styled.p`
     justify-content: center;
     @media (max-width: 700px) {
         height: 4.5rem;
+    }
+    span{
+      margin-left: 5px;
     }
 `
